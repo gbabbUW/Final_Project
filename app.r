@@ -11,6 +11,19 @@ data <- read.csv("data/Speed Dating Data.csv")
 dating.ui <- fluidPage(
 #master UI code starts here------------------  
 
+sidebarLayout(
+  
+  #We'll use this as the control panel for user control
+  sidebarPanel(
+    
+  ),
+  
+  #We'll use this with a tabsetpanel in order to show graphs, reports, figures, etc
+  mainPanel(
+    
+  )
+)
+
 #master UI code ends here--------------------
 )
 #UI code ends here-------------------------------------------------------------------------------------
