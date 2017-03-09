@@ -245,7 +245,7 @@ age.range.opp.sex <- range(look.for.opp.sex$age)
 
 dating.ui <- fluidPage(
   #master UI code starts here------------------  
-  
+  titlePanel("What We Can Learn From Speed Dating"),
 #master UI code starts here------------------  
 #We'll use this as the control panel for user control
   sidebarLayout(
