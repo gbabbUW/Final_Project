@@ -276,13 +276,13 @@ sidebarLayout(
                   when exploring a field's effects on how the individual's partner rated them, how the individual rated their reason 
                   for coming to speed dating, and how the individual rated how much they went out. Ratings are largely normally 
                   distributed, with a rating of 5 or 6 being the norm, while reasoning for speed dating is largely skewed right, meaning
-                  most are speed dating because it "seemed like a fun night out." How many times people go out is largely twice a week or several 
+                  most are speed dating because it seemed like a fun night out. How many times people go out is largely twice a week or several 
                   times a week as well. When exploring the data there were however some correlations made between field and how individuals responded and 
                   were rated."),
                 
                 p("When observing individuals in Medical Science/Pharmaceuticals/Bio Tech, the data for how their partner rated them is 
                   largely skewed left, meaning their ratings are generally very high. The data on their reasoning for speed dating shows that a large 
-                  majority are there to "meet new people," and this may be because the majority say that they go out only twice a month. Working in the medical 
+                  majority are there to meet new people, and this may be because the majority say that they go out only twice a month. Working in the medical 
                   field can be very time consuming, so this statistic is very reasonable."), 
                  
                 p("When observing individuals in the History/Religion/Philosophy fields, they received very high ratings overall, however, 
@@ -290,15 +290,15 @@ sidebarLayout(
                   generally twice a week. Philosophy largely explores humans, including their actions and relationships, so the idea that many 
                   of these individuals are looking for love is very plausible."),
                  
-                 p("When observing Undergraduate Students, they also seemed to receive high ratings over all, were mostly doing it for a "fun night out" 
+                 p("When observing Undergraduate Students, they also seemed to receive high ratings over all, were mostly doing it for a fun night out 
                   and went out around twice a week, something that is very common for individuals attending university."),
                  
-                  p("Most individuals in the field of English/Creative Writing/ Journalism were speed dating "to say that they did it" which was not a 
+                  p("Most individuals in the field of English/Creative Writing/ Journalism were speed dating to say that they did it which was not a 
                   common choice for any of the other fields, this may be because the experience could be substance for their writing.  In contrast, most 
-                  Social Science/Psychologists were doing it to "meet new people" and "because it seemed fun," which also correlates to their subsequent lifestyles. 
-                  Film, language and fine arts also seemed to follow the Social Sciences, showing a coloration between the arts, and speed dating to "meet new people.""), 
+                  Social Science/Psychologists were doing it to meet new people and because it seemed fun, which also correlates to their subsequent lifestyles. 
+                  Film, language and fine arts also seemed to follow the Social Sciences, showing a coloration between the arts, and speed dating to meet new people.), 
                  
-                 p("Although a large majority of the data followed a similar pattern, there are endless inferences that can be made, and it does seem as though the field 
+                 p(Although a large majority of the data followed a similar pattern, there are endless inferences that can be made, and it does seem as though the field 
                   you are in can affect why and how you speed date.")
              
                
