@@ -36,6 +36,7 @@ other.nomatch <- filter(other, match == 0)
 
 #Quantitative data of matches by race-------------------------------------------
 #Black race---------------------------------------------------------------------
+
 #number of matches per race based on a black individual
 black.match.num <- nrow(black.matches)
 black.black.matches <- nrow(filter(black.matches, race_o == 1))
@@ -54,12 +55,13 @@ black.other.nomatches <- nrow(filter(black.nomatch, race_o == 6))
 
 #total number of dates per race per a black individual
 black.black.total <- black.black.matches + black.black.nomatches
-black.caucasion.total <- black.caucasion.matches + black.caucasion.nomatches
+black.caucasian.total <- black.caucasian.matches + black.caucasian.nomatches
 black.latino.total <- black.latino.matches + black.latino.nomatches
 black.asian.total <- black.asian.matches + black.asian.nomatches
 black.other.total <- black.other.matches + black.other.nomatches
 
 #Caucasian race-------------------------------------------------------------------
+
 #number of matches per race based on a caucasian individual
 caucasian.match.num <- nrow(caucasian.matches)
 caucasian.black.matches <- nrow(filter(caucasian.matches, race_o == 1))
@@ -78,12 +80,13 @@ caucasian.other.nomatches <- nrow(filter(caucasian.nomatch, race_o == 6))
 
 #total number of dates per race per a caucasian individual
 caucasian.black.total <-caucasian.black.matches + caucasian.black.nomatches
-caucasian.caucasion.total <- caucasian.caucasion.matches + caucasian.caucasion.nomatches
+caucasian.caucasian.total <- caucasian.caucasian.matches + caucasian.caucasian.nomatches
 caucasian.latino.total <- caucasian.latino.matches + caucasian.latino.nomatches
 caucasian.asian.total <- caucasian.asian.matches + caucasian.asian.nomatches
 caucasian.other.total <- caucasian.other.matches + caucasian.other.nomatches
 
 #Latino race-------------------------------------------------------------------
+
 #number of matches per race based on a latino individual
 latino.match.num <- nrow(latino.matches)
 latino.black.matches <- nrow(filter(latino.matches, race_o == 1))
@@ -102,12 +105,13 @@ latino.other.nomatches <- nrow(filter(latino.nomatch, race_o == 6))
 
 #total number of dates per race per a latino individual
 latino.black.total <-latino.black.matches + latino.black.nomatches
-latino.caucasion.total <- latino.caucasion.matches + latino.caucasion.nomatches
+latino.caucasian.total <- latino.caucasian.matches + latino.caucasian.nomatches
 latino.latino.total <- latino.latino.matches + latino.latino.nomatches
 latino.asian.total <- latino.asian.matches + latino.asian.nomatches
 latino.other.total <- latino.other.matches + latino.other.nomatches
 
 #Asian race--------------------------------------------------------------------
+
 #number of matches per race based on an asian/pacific islander individual
 asian.match.num <- nrow(asian.matches)
 asian.black.matches <- nrow(filter(asian.matches, race_o == 1))
@@ -126,12 +130,13 @@ asian.other.nomatches <- nrow(filter(asian.nomatch, race_o == 6))
 
 #Total number of dates per race of an asian individual
 asian.black.total <-asian.black.matches + asian.black.nomatches
-asian.caucasion.total <- asian.caucasion.matches + asian.caucasion.nomatches
+asian.caucasian.total <- asian.caucasian.matches + asian.caucasian.nomatches
 asian.latino.total <- asian.latino.matches + asian.latino.nomatches
 asian.asian.total <- asian.asian.matches + asian.asian.nomatches
 asian.other.total <- asian.other.matches + asian.other.nomatches
 
 #other race-------------------------------------------------------------------------------
+
 #number of matches per race based on a other individual
 other.match.num <- nrow(other.matches)
 other.black.matches <- nrow(filter(other.matches, race_o == 1))
@@ -150,7 +155,7 @@ other.other.nomatches <- nrow(filter(other.nomatch, race_o == 6))
 
 #Total number of dates per race of an other individual
 other.black.total <-other.black.matches + other.black.nomatches
-other.caucasion.total <- other.caucasion.matches + other.caucasion.nomatches
+other.caucasian.total <- other.caucasian.matches + other.caucasian.nomatches
 other.latino.total <- other.latino.matches + other.latino.nomatches
 other.asian.total <- other.asian.matches + other.asian.nomatches
 other.other.total <- other.other.matches + other.other.nomatches
@@ -158,62 +163,72 @@ other.other.total <- other.other.matches + other.other.nomatches
 #Sorting the above quantitative values into a dataframe for final referrencing
 race <- c("Black","Caucasian","Latino","Asian","Other")
 
-black.match.num <- c(black.black.matches/ black.black.total,
-                     black.caucasian.matches/black.caucasian.total,
-                     black.latino.matches/black.latino.total,
-                     black.asian.matches/black.asian.total,
-                     black.other.matches/black.other.total)
+#creates a vector containing the percentage of positive matches out of the total matches per race for black individuals
+black.match.num <- c(round(black.black.matches/ black.black.total * 100, digits =2),
+                     round(black.caucasian.matches/black.caucasian.total* 100, digits =  2),
+                     round(black.latino.matches/black.latino.total * 100, digits = 2),
+                     round(black.asian.matches/black.asian.total,digits = 2),
+                     round(black.other.matches/black.other.total,digits = 2))
 
-caucasian.match.num <- c(caucasian.black.matches/ caucasian.black.total,
-                         caucasian.caucasian.matches/caucasian.caucasian.total,
-                         caucasian.latino.matches/caucasian.latino.total,
-                         caucasian.asian.matches/caucasian.asian.total,
-                         caucasian.other.matches/caucasian.other.total)
+#creates a vector containing the percentage of positive matches out of the total matches per race for caucasian individuals
+caucasian.match.num <- c(round(caucasian.black.matches/ caucasian.black.total * 100, digits =2),
+                         round(caucasian.caucasian.matches/caucasian.caucasian.total* 100, digits =  2),
+                         round(caucasian.latino.matches/caucasian.latino.total * 100, digits = 2),
+                         round(caucasian.asian.matches/caucasian.asian.total,digits = 2),
+                         round(caucasian.other.matches/caucasian.other.total,digits = 2))
 
-latino.match.num <- c(latino.black.matches/ latino.black.total,
-                      latino.caucasian.matches/latino.caucasian.total,
-                      latino.latino.matches/latino.latino.total,
-                      latino.asian.matches/latino.asian.total,
-                      latino.other.matches/latino.other.total)
+#creates a vector containing the percentage of positive matches out of the total matches per race for latino individuals
+latino.match.num <- c(round(latino.black.matches/ latino.black.total * 100, digits =2),
+                      round(latino.caucasian.matches/latino.caucasian.total* 100, digits =  2),
+                      round(latino.latino.matches/latino.latino.total * 100, digits = 2),
+                      round(latino.asian.matches/latino.asian.total,digits = 2),
+                      round(latino.other.matches/latino.other.total,digits = 2))
 
-asian.match.num <- c(asian.black.matches/ asian.black.total,
-                     asian.caucasian.matches/asian.caucasian.total,
-                     asian.latino.matches/asian.latino.total,
-                     asian.asian.matches/asian.asian.total,
-                     asian.other.matches/asian.other.total)
+#creates a vector containing the percentage of positive matches out of the total matches per race for asian individuals
+asian.match.num <- c(round(asian.black.matches/ asian.black.total * 100, digits =2),
+                     round(asian.caucasian.matches/asian.caucasian.total* 100, digits =  2),
+                     round(asian.latino.matches/asian.latino.total * 100, digits = 2),
+                     round(asian.asian.matches/asian.asian.total,digits = 2),
+                     round(asian.other.matches/asian.other.total,digits = 2))
 
-other.match.num <- c(other.black.matches/ other.black.total,
-                     other.caucasian.matches/other.caucasian.total,
-                     other.latino.matches/other.latino.total,
-                     other.asian.matches/other.asian.total,
-                     other.other.matches/other.other.total)
+#creates a vector containing the percentage of positive matches out of the total matches per race for other individuals
+other.match.num <- c(round((other.black.matches/ other.black.total)* 100, digits = 2),
+                    round((other.caucasian.matches/other.caucasian.total)* 100,digits = 2),
+                    round((other.latino.matches/other.latino.total)* 100,digits = 2),
+                    round((other.asian.matches/other.asian.total)* 100,digits = 2),
+                    round((other.other.matches/other.other.total)* 100,digits = 2 ))
 
-black.nomatches.num <- c(black.black.nomatches,caucasian.black.nomatches,latino.black.nomatches,asian.black.nomatches,other.black.nomatches)
-caucasian.nomatches.num <- c(black.caucasian.nomatches,caucasian.caucasian.nomatches,latino.caucasian.nomatches,asian.caucasian.nomatches,other.caucasian.nomatches)
-latino.nomatches.num <- c(black.latino.nomatches,caucasian.latino.nomatches,latino.latino.nomatches,asian.latino.nomatches,other.latino.nomatches)
-asian.nomatches.num <- c(black.asian.nomatches,caucasian.asian.nomatches,latino.asian.nomatches,asian.asian.nomatches,other.asian.nomatches)
-other.nomatches.num <- c(black.other.nomatches,caucasian.other.nomatches,latino.other.nomatches,asian.other.nomatches,other.other.nomatches)
+#creates data frames using the vectors of positive matches per race for each respective race, used for later reactive filtering
+black.data <- data.frame(race,black.match.num)
+caucasian.data <- data.frame(race,caucasian.match.num)
+latino.data <- data.frame(race,latino.match.num)
+asian.data <- data.frame(race,asian.match.num)
+other.data <- data.frame(race,other.match.num)
 
+#cleans up the column names for easier reactive variables
+colnames(black.data) <- c("race","match.percentage")
+colnames(caucasian.data) <- c("race","match.percentage")
+colnames(latino.data) <- c("race","match.percentage")
+colnames(asian.data) <- c("race","match.percentage")
+colnames(other.data) <- c("race","match.percentage")
 
-sorted.data <- data.frame(race, black.match.num, caucasian.match.num, latino.match.num, asian.match.num, other.match.num)
-
-View(sorted.data)
 #UI code starts here, will be used by everybody so expect merge conflicts and keep it clean------------
 dating.ui <- fluidPage(
 #master UI code starts here------------------  
 
 sidebarLayout(
-  
+
   #We'll use this as the control panel for user control
   sidebarPanel(
     
+    #Creates a drop down input in which you can select different races to see who they matched with per race
     selectInput('selected.race', label = "Race", choices = c("Black", "Caucasian", "Latino", "Asian", "Other"))
-    
+
   ),
-  
+
   #We'll use this with a tabsetpanel in order to show graphs, reports, figures, etc
   mainPanel(
-    plotOutput(plot)
+    plotOutput('plot')
   )
 )
 
@@ -226,21 +241,45 @@ sidebarLayout(
 dating.server <- function(input, output) {
 #master server code starts here------------------  
 
-  filtered.race <- reactive({
-    filtered.race.data <- sorted.data %>%
-      filter(race == input$selected.race)
+  #chooses a dataframe of information containing matches per race for a specific race based on user input
+  filtered <- reactive({
+    if(input$selected.race == "Black"){
+      filtered.race.data <- black.data
+    }
     
+    else if(input$selected.race == "Caucasian"){
+      filtered.race.data <- caucasian.data
+    }
+    
+    else if(input$selected.race == "Latino"){
+      filtered.race.data <- latino.data
+    }
+    
+    else if(input$selected.race == "Asian"){
+      filtered.race.data <- asian.data
+    }
+    
+    else if(input$selected.race == "Other"){
+      filtered.race.data <- other.data
+    }
+   
     return(filtered.race.data)
   })
-  
+
+  #renders a plot of percentage of matches per race based on the chosen race of the user
   output$plot <- renderPlot({
-   raceplot <- ggplot(data = filtered.race, x = black.match.num)
-   
+   raceplot <- ggplot(data = filtered(), mapping = aes(x = race, y = match.percentage, fill = race)) +
+     geom_bar(stat="identity") +
+     labs (x = "Race") +
+     labs (y = "Percent of Positive Matches")
+
    return(raceplot)
   })
   
 #master server code ends here--------------------  
+  
 }
+
 #Server code ends here---------------------------------------------------------------------------------
 
 shinyApp(ui = dating.ui, server = dating.server)
