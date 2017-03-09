@@ -254,7 +254,47 @@ sidebarLayout(
                plotOutput('plot.race', brush = "plot_brush"),
                verbatimTextOutput("info.race"),
                h3('Percentage of Positive Matches by Race'),
-               p('This bar graph shows how members of the race you have selected matched members of other races during speed dating; it is important to note that while a category for Native Americans was included in the raw data, no individuals who identified as Native American took part in this study. The bars represent the percent of individuals in each race that your selected race considered a "match" divided by the total amount of dates your selected race had with each race. Do note that the bar graph scales for each selected race, so keep an eye on the y axis!')),
+               p('This bar graph shows how members of the race you have selected matched members of other races during speed
+                 dating; it is important to note that while a category for Native Americans was included in the raw data, no
+                 individuals who identified as Native American took part in this study. The bars represent the percent of
+                 individuals in each race that your selected race considered a "match" divided by the total amount of dates
+                 your selected race had with each race. Do note that the bar graph scales for each selected race, so keep an
+                 eye on the y axis!'),
+               h3('Analysis of Data'),
+               
+               p('For the purpose of this analysis we will break up our data into the six different race groups that the data
+                  presents. The maximum match percentage across the board was Black individuals and other Black individuals, 
+                  with 56% of dates resulting in a match between these groups of individuals. The lowest match percentage was tied
+                  between Asian individuals with Asian individuals and Asian individuals with Other individuals, making a .13 percent
+                  match rate. The following are the prominent statistics for each race group:'),
+               
+               p('Black individuals matched with other Black individuals the most with a match rate of 56% and matched with Asian
+                 individuals the least, with a percentage below .5. Caucasian and Latino match rates were comparable with rates
+                 of 18% and 21%, respectively. Match rate with individuals who identified as another gender were slightly above
+                 match rates with Asians, but not enough to bring it above 1%'),
+               
+               p('Caucasian individuals matched with Latino individuals the most with
+                 a match rate of 18% followed closely by Caucasian individuals and
+                 Black individuals, deviating by roughly 1 percent. Both Asian and
+                 Other match rates were very close to 1 percent.'),
+               
+               p('Latino individuals matched with Latino individuals the most with a
+                 match rate of 23 percent. They matched with Asian individuals the
+                other match rates were near 20, 18, and 1 percent respectively.'),
+               
+               p('Asian individuals matched with Black individuals the most with a 
+                 match rate of 18 percent, and matched with other Asians the least
+                 with a value of less than 1 percent, followed closely by Other
+                 individuals slightly below 1 percent as well. The match rates for
+                 Caucasian and Latino individuals were both slightly above 13 
+                 percent'),
+               
+               p('Individuals who identied as the race Other matched with Black
+                 individuals the most with a rate of 41 percent and matched with
+                 Other individuals the least with a rate of 9 percent. Latino,
+                 Caucasian, and Asian match rates were 34, 19, and 18 percent
+                 respectively.')
+               ),
       
       tabPanel("Fields/Careers",
                plotOutput('plot.rate', brush = "plot_brush"),
