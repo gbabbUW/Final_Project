@@ -228,7 +228,9 @@ sidebarLayout(
 
   #We'll use this with a tabsetpanel in order to show graphs, reports, figures, etc
   mainPanel(
-    plotOutput('plot')
+    plotOutput('plot', brush = "plot_brush"),
+    verbatimTextOutput("info.out"),
+    p('This bar graph shows how members of the race you have selected matched members of other races during speed dating; it is important to note that while a category for Native Americans was included in the raw data, no individuals who identified as Native American took part in this study. The bars represent the percent of individuals in each race that your selected race considered a "match" divided by the total amount of dates your selected race had with each race. Do note that the bar graph scales for each selected race, so keep an eye on the y axis!')
   )
 )
 
@@ -274,6 +276,15 @@ dating.server <- function(input, output) {
      labs (y = "Percent of Positive Matches")
 
    return(raceplot)
+  })
+  
+  # Output for brushing a bar
+  output$info.out <- renderText({
+    if(is.null(input$plot_brush)){
+      xy <- ("Click and drag across a bar for it's value!")
+    }else{
+      paste0("Count: ", round(input$plot_brush$ymax, 0))
+    }
   })
   
 #master server code ends here--------------------  
