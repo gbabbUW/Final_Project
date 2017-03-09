@@ -271,7 +271,7 @@ sidebarLayout(
                p('Black individuals matched with other Black individuals the most with a match rate of 56% and matched with Asian
                  individuals the least, with a percentage below .5. Caucasian and Latino match rates were comparable with rates
                  of 18% and 21%, respectively. Match rate with individuals who identified as another gender were slightly above
-                 match rates with Asians, but not enough to bring it above 1%'),
+                 match rates with Asians, but not enough to bring it above 1%.'),
                
                p('Caucasian individuals matched with Latino individuals the most with
                  a match rate of 18% followed closely by Caucasian individuals and
@@ -287,7 +287,7 @@ sidebarLayout(
                  with a value of less than 1 percent, followed closely by Other
                  individuals slightly below 1 percent as well. The match rates for
                  Caucasian and Latino individuals were both slightly above 13 
-                 percent'),
+                 percent.'),
                
                p('Individuals who identied as the race Other matched with Black
                  individuals the most with a rate of 41 percent and matched with
