@@ -1,4 +1,4 @@
-#H1 What You Need to Know About Speed Dating
+#What You Need to Know About Speed Dating
 
 In this application the user is able to break down different facets of an experiment on speed dating conducted by the Columbia Business School during the years of 2002-2004.
 
